@@ -87,8 +87,9 @@ void opcontrol() {
 		// Arcade control scheme
 		int dir = master.get_analog(ANALOG_LEFT_Y);    // Gets amount forward/backward from left joystick
 		int turn = master.get_analog(ANALOG_RIGHT_X);  // Gets the turn left/right from right joystick
-		left_mg.move(dir - turn);                      // Sets left motor voltage
-		right_mg.move(dir + turn);                     // Sets right motor voltage
+		left_mg.move(dir + turn);                      // Sets left motor voltage
+		right_mg.move(dir - turn);                     // Sets right motor voltage
+
 		pros::delay(20);                               // Run for 20 ms then update
 	}
 }
